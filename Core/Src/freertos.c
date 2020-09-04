@@ -218,7 +218,7 @@ void StartTask4(void const * argument)
 		{
 		 if( (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)) == RESET )
 			 {  
-				 HAL_Delay (30);
+				 osDelay(30);
 	    if( (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)) == RESET )
 			  {
 				   key_status = KEY_ON;
@@ -226,7 +226,7 @@ void StartTask4(void const * argument)
 			}
       else if ((HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)) == SET )			 
 			{
-				  HAL_Delay (30);
+				  osDelay(30);
 				if( (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)) == SET )
 			  {
 				   key_status = KEY_OFF;
